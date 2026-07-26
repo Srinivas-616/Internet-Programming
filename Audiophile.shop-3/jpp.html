@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jpp.css">
+    <title>Audiophiles.shop</title>
+    <style>
+        .imag:hover{
+            scale:1.1;
+            border:gray 5px solid;
+        }
+        #box{
+            margin:25px;
+            border:grey 5px solid;
+            border-radius: 10px;
+            padding: 25px;
+        }
+    </style>
+    <script>
+   function dragstartHandler(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  const item = document.getElementById(data);
+  const copy = item.cloneNode(true);
+  ev.target.appendChild(copy);
+}
+</script>
+</head>
+<body style="margin: 0px;">
+    <header style="background-color: gray;color:white;padding: 25px;">
+        <h1 class="hd">Audiophile.shop</h1>
+    </header><br><br><br>   
+    <div id="box">
+        <h1 id="pds" class="hd">Products </h1><br>
+        <img id="pic" src="OPAC.jpg" usemap="#tracking">
+        <map name="tracking">   
+            <area shape="rect" coords="0,0,396,386" href="#iem">
+            <area shape="rect" coords="396,0,761,386" href="#strngs">
+            <area shape="rect" coords="761,0,1174,386" href="#keyi">
+            <area shape="rect" coords="1174,0,1573,386" href="#mouth">
+        </map>
+    </div>
+    <table cellspacing="50">
+    <tr>
+    <td>
+    <div id="iem">
+        <h2 class="hd">In-Ear Monitors </h2><br>
+        <table>
+        <tr>
+        <td><img class="imag" src="OPAC (1).jfif" id="IEM1" width="250" height="250"  draggable="true" ondragstart="dragstartHandler(event)">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        <td>
+        <img class="imag" id="IEM2" src="OPAC.jfif" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        </tr>
+        </table>
+    </div>
+    <div id="strngs">
+        <h2 class="hd">String Instruments </h2>
+        <table>
+        <tr>
+        <td>
+        <img class="imag" src="OPAC (2).jfif" id="Guitar" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250" >
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        <td>
+        <img class="imag" src="OPAC (3).jfif" id="Violin" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        </tr>
+        </table>
+    </div>
+    <div id="keyi">
+        <h2 class="hd">Key Instruments </h2>
+         <table>
+        <tr>
+        <td>
+        <img class="imag" src="OPAC (5).jfif" id="keyboard" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        <td>
+        <img class="imag" src="OPAC (6).jfif" id="Launchpad"  draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        </tr>
+        </table>    
+    </div>
+    <div id="mouth">
+        <h2 class="hd">Mouth Instruments </h2>
+         <table>
+        <tr>
+        <td>
+        <img class="imag" src="OPAC (4).jfif" id="Trumpet" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        <td>
+        <img class="imag" src="OPAC (8).jfif" id="Micset" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        </tr>
+        </table>
+    </div>
+    </td>
+    <td><h1 class="hd">Cart</h1><div ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" style="width: 720px; height:1600px;border: 5px solid #000000; padding: 20px;background-color: grey;"></div></td>
+    </tr>
+    <tr><td colspan="2"><center><a href="Buynow.html" ><button id="but" ><b>Buy Now</b></button></a></center></td></tr>
+    </table>
+</body>
+
+</html>

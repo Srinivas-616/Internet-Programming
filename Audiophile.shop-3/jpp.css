@@ -1,0 +1,23 @@
+#but{
+    width:100px;
+    height: 50px;
+    color: white;
+    background-color: #000000;
+    border:none;
+    border-radius: 5px;
+}
+#but:hover{
+    background-color: gray;
+    scale:1.25;
+}
+#pic{
+    scale:.70;
+}
+.hd{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:maroon;
+    font-style: italic;
+}
+video:hover{
+    scale:1.1;
+}
