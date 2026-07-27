@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now - Audiophile.shop</title>
+    <script>
+    const x = document.getElementById("addr");
+
+    function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+    }
+
+    function success(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+    }
+
+    function error() {
+    alert("Sorry, no position available.");
+    }
+</script>
+</head>
+<body>
+
+    <header style="background-color:black; color:white; padding:15px;">
+        <h1>Audiophile.shop</h1>
+    </header>
+
+    <center>
+        <h2>Checkout</h2>
+    </center>
+
+    <hr>
+
+    <h3>Customer Details</h3>
+
+    <form>
+
+        <table cellpadding="10">
+
+            <tr>
+                <td>Full Name</td>
+                <td colspan="2"><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td colspan="2"><input type="email"></td>
+            </tr>
+
+            <tr>
+                <td>Phone Number</td>
+                <td colspan="2"><input type="tel"></td>
+            </tr>
+
+            <tr>
+                <td>Delivery Address</td>
+                <td><button type="button" onclick="getLocation()" style="width:100px;height: 50px;color: white;background-color: #000000;border:none;">Get Location</button></td>
+                <td>
+                    <p id="addr"></p>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <center><button type="submit" style="width:100px;height: 50px;color: white;background-color: #000000;border:none;"><b>Place Orger</b></button></center>
+
+       
+    </form>
+
+</body>
+</html>

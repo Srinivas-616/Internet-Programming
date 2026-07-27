@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiophiles.shop</title>
+    <script>
+   function dragstartHandler(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault();
+}
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  const item = document.getElementById(data);
+  const copy = item.cloneNode(true);
+  ev.target.appendChild(copy);
+}
+</script>
+</head>
+<body>
+    <header style="background-color: black;color:white;padding: 15px;">
+        <h1>Audiophile.shop</h1>
+    </header><br><br><br>
+    <div>
+        <h2>Products </h2><br>
+        <img src="OPAC.jpg" usemap="#tracking">
+        <map name="tracking">
+            <area shape="rect" coords="0,0,396,386" href="#iem">
+            <area shape="rect" coords="396,0,761,386" href="#strngs">
+            <area shape="rect" coords="761,0,1174,386" href="#keyi">
+            <area shape="rect" coords="1174,0,1573,386" href="#mouth">
+        </map>
+    </div>
+    <table cellspacing="50">
+    <tr>
+    <td>
+    <div id="iem">
+        <h2>In-Ear Monitors </h2><br>
+        <table>
+        <tr>
+        <td><img src="OPAC (1).jfif" id="IEM1" width="250" height="250"  draggable="true" ondragstart="dragstartHandler(event)">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        <td>
+        <img id="IEM2" src="Untitled.png" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        </tr>
+        </table>
+    </div>
+    <div id="strngs">
+        <h2>String Instruments </h2>
+        <table>
+        <tr>
+        <td>
+        <img src="OPAC (2).jfif" id="Guitar" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250" >
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        <td>
+        <img src="OPAC (3).jfif" id="Violin" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        </tr>
+        </table>
+    </div>
+    <div id="keyi">
+        <h2>Key Instruments </h2>
+         <table>
+        <tr>
+        <td>
+        <img src="OPAC (5).jfif" id="keyboard" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        <td>
+        <img src="OPAC (6).jfif" id="Launchpad"  draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        </tr>
+        </table>    
+    </div>
+    <div id="mouth">
+        <h2>Mouth Instruments </h2>
+         <table>
+        <tr>
+        <td>
+        <img src="OPAC (4).jfif" id="Trumpet" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        <td>
+        <img src="OPAC (8).jfif" id="Micset" draggable="true" ondragstart="dragstartHandler(event)" width="250" height="250">
+        <video width="250" height="100" controls><source src="Rick.mp4" type="video/mp4"></video>
+        </td>
+        </tr>
+        </table>
+    </div>
+    </td>
+    <td><h1>Cart</h1><div ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" style="width: 720px; height:1600px;border: 5px solid #000000; padding: 20px;"></div></td>
+    </tr>
+    <tr><td colspan="2"><center><a href="Buynow.html" ><button style="width:100px;height: 50px;color: white;background-color: #000000;border:none;"><b>Buy Now</b></button></a></center></td></tr>
+    </table>
+</body>
+
+</html>
