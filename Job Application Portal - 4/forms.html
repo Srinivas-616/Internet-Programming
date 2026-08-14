@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jop Application Form</title>
+    <style>
+        h2{
+            margin-top: 175px;
+        }
+        body {
+            text-align: center;
+            background-image: url(bg2.jpg);
+        }
+        table {
+            margin: auto;
+            border: 2px solid black;
+            padding: 20px;
+            background-color: grey;
+            border-radius: 20px;
+            
+        }
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+        tr{
+            align-items: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Job Application Form</h2>
+    <form onsubmit="return validateForm()">
+        <div>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" id="name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td>
+                    <input type="text" id="phone" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input type="text" id="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" required> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td>
+                    <input type="date" id="date" required>
+                </td>
+            </tr>
+            <tr>
+            <tr>
+                <td>Degree:</td>
+                <td>
+                    <select id="workshop" required>
+                        <option value="">Select degree</option>
+                        <option>B.Sc</option>
+                        <option>B.Tech</option>
+                        <option>B.E</option>
+                        <option>B.A</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Work Experince:</td>
+                <td>
+                    <select id="payment" required>
+                        <option value="">Select experience</option>
+                        <option>None</option>
+                        <option>1-2 years</option>
+                        <option>3-4 years</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="file" id="resume" required>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Apply">
+                </td>
+            </tr>
+        </table>
+        </div>
+    </form>
+    <script>
+        function validateForm() {
+            var name=document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var resume=document.getElementById("resume").value;
+            var errors = [];
+            if(!/^[A-Z][a-z]+$/.test(name)){
+                errors.push("Names must start with capital letter");
+            }
+            if (!/^[0-9]+$/.test(phone)) {
+                errors.push("Phone number must contain only digits.");
+            }
+            if (phone.length != 10) {
+                errors.push("Phone number must contain exactly 10 digits.");
+            }
+            var at = email.indexOf("@");
+            var dot = email.indexOf(".");
+            if (at == -1) {
+                errors.push("Email must contain @.");
+            }
+            if (dot == -1) {
+                errors.push("Email must contain a dot (.).");
+            }
+            if (at != -1 && dot != -1 && at > dot) {
+                errors.push("In email, @ must come before the dot (.).");
+            }
+            if(!/\.(pdf|doc|docx)$/i.test(resume)){
+                errors.push("Please upload a valid resume file (PDF, DOC, DOCX)");
+        
+            }
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+                return false;
+            }
+            alert("Applied successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>
