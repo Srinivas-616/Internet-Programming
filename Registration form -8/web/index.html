@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div{
+            margin:175px;
+            padding:20px;
+            margin-left:600px;
+            background-color: #9999ff;
+            width:375px;
+            border-radius: 25px;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Registeration Form:</h1>
+            <form action="DispForm.jsp">
+                <table cellspacing="15">
+                    <tr>
+                        <td>User_Name :</td>
+                        <td><input type="text" name="uname"></td>
+                    </tr>
+                    <tr>
+                        <td>Password :</td>
+                        <td><input type="password" name="passwd"></td>
+                    </tr>
+                    <tr>
+                        <td>Name :</td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td>Credit card number :</td>
+                        <td><input type="number" name="cc" maxlength="16"></td>
+                    </tr>
+                    <tr>
+                        <td>Email :</td>
+                        <td><input type="email" name="mail"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone :</td>
+                        <td><input type="number" name="phone" maxlength="10"></td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <th colspan="2"><input type="submit" value="Submit"></th> 
+                    </tr>
+                       
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
