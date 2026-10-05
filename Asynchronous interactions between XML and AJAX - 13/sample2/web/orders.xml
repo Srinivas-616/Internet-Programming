@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<root>
+        <orders>
+
+    <order>
+        <id>101</id>
+        <customer>John Doe</customer>
+        <product>Wireless Mouse</product>
+        <quantity>2</quantity>
+        <price>25.99</price>
+    </order>
+
+    <order>
+        <id>102</id>
+        <customer>Jane Smith</customer>
+        <product>Keyboard</product>
+        <quantity>1</quantity>
+        <price>45.50</price>
+    </order>
+
+    <order>
+        <id>103</id>
+        <customer>David Kumar</customer>
+        <product>USB Cable</product>
+        <quantity>3</quantity>
+        <price>10.99</price>
+    </order>
+
+    </orders>
+    
+</root>

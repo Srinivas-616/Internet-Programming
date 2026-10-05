@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<library>
+    <book>
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <year>1925</year>
+        <price>Rs.1000</price>
+    </book>
+    <book>
+        <title>To Kill a Mockingbird</title>
+        <author>Harpee Lee</author>
+        <year>1960</year>
+        <price>Rs.1500</price>
+    </book>
+    <book>
+        <title>Lolita</title>
+        <author>Vladimir Nabokov</author>
+        <year>1955</year>
+        <price>Rs.1200</price>
+    </book>
+</library>
